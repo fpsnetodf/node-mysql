@@ -1,0 +1,27 @@
+{% extends "modelo.html" %}
+
+
+{% block title %}Form{% endblock title %}        
+
+{% block header %}{% endblock header %}
+{% block titulo %}
+{% include "nav.html" %}
+    <h1 class="text-center text-4xl text-green-400 font-bold">Página form</h1>
+{% endblock titulo %}
+{% block conteudo %}
+    <form action="/books/insertbook" method="post">
+        <div class="mx-auto text-center">
+            <label class="text-violet-300 hover:text-rose-200 text-xl font-bold" for="titulo">Titulo</label>
+            <input class="px-4 font-bold text-black bg-gray-300" type="text" id="titulo" name="titulo" placeholder="Digite um titulo">
+        </div>
+        <div class="mx-auto text-center">
+            <label class="text-violet-300 hover:text-rose-200 text-xl font-bold" for="num_page">número de páginas</label>
+            <input class="px-4 font-bold text-black bg-gray-300" type="text" id="num_page" name="num_page" placeholder="Digite o múmero de paginas">
+        </div>
+        <div class="text-center">
+            <input class="bg-sky-300 px-4 py-2 hover:text-white hover:bg-sky-500 rounded-xl mt-4" type="submit" value="Enviar">
+        </div>
+    </form>    
+{% endblock conteudo %}
+{% block footer %}{% endblock footer %}
+{% block scripts %}{% endblock scripts %} 

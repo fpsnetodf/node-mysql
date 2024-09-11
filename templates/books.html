@@ -1,0 +1,21 @@
+{% extends "modelo.html" %}
+
+
+{% block title %}Livros{% endblock title %}        
+
+{% block header %}{% endblock header %}
+{% block titulo %}
+{% include "nav.html" %}
+    <h1 class="text-center text-4xl text-green-400 font-bold">Página Books</h1>
+{% endblock titulo %}
+{% block conteudo %}
+    <div class="flex justify-center">
+        <ul class="text-center">
+            {% for livro in livros %}
+                <li class="text-violet-300 font-bold text-xl">{{ livro.titulo }} <span class="text-rose-600 font-bold text-xl">{{ livro.num_page }}</span></li>           
+            {% endfor %}
+        </ul>
+    </div>    
+{% endblock conteudo %}
+{% block footer %}{% endblock footer %}
+{% block scripts %}{% endblock scripts %} 

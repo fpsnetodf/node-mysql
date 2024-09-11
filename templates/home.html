@@ -1,0 +1,21 @@
+{% extends "modelo.html" %}
+
+
+{% block title %}Home{% endblock title %}        
+
+{% block header %}{% endblock header %}
+{% block titulo %}
+{% include "nav.html" %}
+    <h1 class="text-center text-4xl text-green-400 font-bold">Página Home</h1>
+{% endblock titulo %}
+{% block conteudo %}
+    
+    <p class="text-center text-lg text-gray-500">nome:<span class="text-rose-300"> {{ nome }}</span></p>
+    <p class="text-center text-lg text-gray-500">idade: <span class="text-rose-300">{{ idade }}</span></p>
+    <p class="text-center text-lg text-gray-500">email: <span class="text-rose-300">{{ email }}</span></p>
+    
+    <p class="text-center text-lg text-gray-500 text-violet-300">Você está na pagina Home</p>
+       
+{% endblock conteudo %}
+{% block footer %}{% endblock footer %}
+{% block scripts %}{% endblock scripts %} 
